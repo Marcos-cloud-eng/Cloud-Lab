@@ -1,10 +1,10 @@
-# ☁️ Cloud-Lab
+# Cloud-Lab
 
 Welcome to my Cloud Engineering learning journey.
 
 This repository contains hands-on labs, notes, documentation and practical projects covering the core technologies required for a Cloud Engineer.
 
-## 🚀 Roadmap
+## Roadmap
 
 - Networking
 - Linux
@@ -17,7 +17,7 @@ This repository contains hands-on labs, notes, documentation and practical proje
 - Terraform
 - Kubernetes
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 Cloud-Lab
@@ -34,7 +34,7 @@ Cloud-Lab
 └── 10-Kubernetes
 ```
 
-## 🎯 Goal
+## Goal
 
 Build a professional Cloud Engineering portfolio through real-world labs and documentation.
 
@@ -48,5 +48,3 @@ Every lab includes:
 - References
 
 ---
-
-⭐ Always learning.
