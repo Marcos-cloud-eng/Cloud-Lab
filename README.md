@@ -20,18 +20,17 @@ This repository contains hands-on labs, notes, documentation and practical proje
 ## Repository Structure
 
 ```
-Cloud-Lab
-│
-├── 01-Networking-Basics
-├── 02-Linux-Essentials
-├── 03-Git-GitHub
-├── 04-Azure-Fundamentals
-├── 05-SC900
-├── 06-Python
-├── 07-AZ104
-├── 08-Docker
-├── 09-Terraform
-└── 10-Kubernetes
+Cloud-Lab/
+├── 01-Networking-Basics/
+├── 02-Linux/
+├── 03-Git-GitHub/
+│   ├── README.md
+│   ├── lab-01-Git-Essentials/
+│   ├── labs/
+│   └── screenshots/
+├── 04-Azure/
+├── LICENSE
+└── README.md
 ```
 
 ## Goal
