@@ -1,0 +1,15 @@
+[0;1;31m×[0m grub-initrd-fallback.service - GRUB failed boot detection
+     Loaded: loaded (]8;;file://CLAB-UBU01/usr/lib/systemd/system/grub-initrd-fallback.service\/usr/lib/systemd/system/grub-initrd-fallback.service]8;;\; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sat 2026-08-01 00:57:26 -03; 2h 4min ago
+ Invocation: ecf27c6ec96f4f2984232867a34792a7
+    Process: 1455 ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset initrdfail (code=exited, status=0/SUCCESS)
+    Process: 1508 ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset prev_entry [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 1508 (code=exited, status=1/FAILURE)
+   Mem peak: 5.1M
+        CPU: 127ms
+
+Aug 01 00:57:25 CLAB-UBU01 systemd[1]: Starting grub-initrd-fallback.service - GRUB failed boot detection...
+Aug 01 00:57:26 CLAB-UBU01 grub-editenv[1508]: /usr/bin/grub-editenv: error: invalid environment block.
+Aug 01 00:57:26 CLAB-UBU01 systemd[1]: [0;1;39m[0;1;31m[0;1;39mgrub-initrd-fallback.service: Main process exited, code=exited, status=1/FAILURE[0m
+Aug 01 00:57:26 CLAB-UBU01 systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mgrub-initrd-fallback.service: Failed with result 'exit-code'.[0m
+Aug 01 00:57:26 CLAB-UBU01 systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start grub-initrd-fallback.service - GRUB failed boot detection.[0m
