@@ -1,0 +1,40 @@
+## Troubleshooting
+
+### Docker permission denied when starting Minikube
+
+When running:
+
+```bash
+minikube start --driver=docker
+/var/run/docker.sock
+
+The error occurred because the current user session did not have active membership in the docker group.
+
+Diagnosis
+
+The following commands were used:
+
+groups
+getent group docker
+ls -l /var/run/docker.sock
+
+The user marcos was correctly listed in the docker group, and the Docker socket permissions were:
+
+root docker
+
+However, the current session had not yet loaded the new group membership.
+
+Resolution: The virtual machine was restarted:
+sudo reboot
+
+After login, Docker was tested again without sudo:
+docker ps
+
+Then Minikube started successfully:
+
+minikube start --driver=docker
+
+Result
+
+The Kubernetes cluster was successfully created and kubectl was configured to use the minikube cluster.
+
