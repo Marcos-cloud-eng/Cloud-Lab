@@ -1,0 +1,47 @@
+## Troubleshooting
+
+### Unable to connect to the Kubernetes API Server
+
+While running:
+
+```bash
+kubectl get nodes
+
+the following error occurred:
+
+Unable to connect to the server: dial tcp 192.168.49.2:8443: connect: no route to host
+
+Problem
+
+kubectl was configured to use the Minikube cluster, but it could not reach the Kubernetes API Server.
+
+Diagnosis
+
+The following commands were used to verify the environment:
+
+minikube status
+docker ps
+kubectl config current-context
+
+The current Kubernetes context was verified as:
+
+minikube
+
+The issue was related to the Minikube cluster not being fully available.
+
+Resolution
+
+The Minikube cluster was started again using the Docker driver:
+V=minikube start --driver=docker
+After restarting Minikube, cluster connectivity was tested:
+
+kubectl get nodes
+
+Here the result
+
+The Kubernetes API Server became reachable again and the Minikube node returned to the Ready state.
+
+key learning
+
+kubectl communicates with the Kubernetes API Server. If the cluster or its network is unavailable, kubectl cannot manage Kubernetes resources even if the client itself is correctly installed and configured.
+
