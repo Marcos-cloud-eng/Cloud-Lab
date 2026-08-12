@@ -1,0 +1,141 @@
+# Terraform Lab 02 - Variables, Outputs and tfvars
+
+## Scenario
+
+This lab focuses on improving Terraform configuration by separating variables, infrastructure resources, input values and outputs.
+
+The goal is to move from a simple Terraform configuration to a more organized and reusable Infrastructure as Code structure.
+
+## Objectives
+
+- Create and use Terraform variables
+- Understand variables.tf
+- Understand terraform.tfvars
+- Create Terraform outputs
+- Understand outputs.tf
+- Validate Terraform configuration
+- Use variables inside resources
+- Modify infrastructure through variable values
+- Practice the Terraform lifecycle
+
+## Environment
+
+- Ubuntu Linux
+- Terraform CLI
+- HashiCorp Local Provider
+- Git
+- GitHub
+
+## Project Structure
+
+Lab-02/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── terraform.tfvars
+└── screenshots/
+
+## Files
+
+### main.tf
+
+Defines the infrastructure resource managed by Terraform.
+
+### variables.tf
+
+Defines the variables that can be used by the Terraform configuration.
+
+Variables used:
+
+- file_name
+- environment
+
+### terraform.tfvars
+
+Provides custom values for the variables.
+
+Example:
+
+file_name   = "cloud-lab-production.txt"
+environment = "production"
+
+### outputs.tf
+
+Displays useful information after Terraform creates the resource.
+
+Outputs used:
+
+- managed_file
+- environment
+
+## Commands Used
+
+terraform init
+
+Initializes the Terraform working directory and downloads the required provider.
+
+terraform validate
+
+Checks whether the Terraform configuration syntax is valid.
+
+terraform plan
+
+Shows the changes Terraform intends to perform.
+
+terraform apply
+
+Creates or modifies the resources defined in the configuration.
+
+terraform output
+
+Displays the output values defined in outputs.tf.
+
+terraform destroy
+
+Removes the resources managed by Terraform.
+
+## Workflow
+
+variables.tf
+      ↓
+Defines available variables
+
+terraform.tfvars
+      ↓
+Provides variable values
+
+main.tf
+      ↓
+Uses variables to define infrastructure
+
+terraform plan
+      ↓
+Previews changes
+
+terraform apply
+      ↓
+Creates or updates resources
+
+outputs.tf
+      ↓
+Returns useful information
+
+terraform destroy
+      ↓
+Removes managed resources
+
+## Result
+
+Terraform successfully created a local resource using variables instead of hardcoded values.
+
+The configuration was then modified using terraform.tfvars, demonstrating how the same Terraform code can be reused with different input values.
+
+## Key Learning
+
+Variables make Terraform configurations reusable and easier to maintain.
+
+The terraform.tfvars file allows values to change without modifying the main infrastructure configuration.
+
+Outputs provide useful information about resources after deployment.
+
+This structure represents an important step toward managing real cloud infrastructure with Terraform on platforms such as Microsoft Azure and AWS.
