@@ -1,0 +1,143 @@
+# Terraform Lab 01 - Fundamentals and Infrastructure as Code
+
+## Scenario
+
+This lab introduces the fundamental Terraform workflow in a Linux environment.
+
+The objective was to install Terraform, create a simple resource using Infrastructure as Code (IaC), understand Terraform State, modify the desired configuration, detect changes and remove the managed resource.
+
+## Objectives
+
+- Install Terraform on Ubuntu
+- Understand Terraform configuration files
+- Initialize a Terraform working directory
+- Preview infrastructure changes
+- Create a resource using Terraform
+- Understand Terraform State
+- Modify an existing configuration
+- Detect differences between desired and actual state
+- Destroy Terraform-managed resources
+
+## Environment
+
+- Ubuntu Linux
+- Terraform CLI
+- HashiCorp Local Provider
+- Git
+- GitHub
+
+## Terraform Configuration
+
+The lab uses the HashiCorp Local Provider to manage a local file as a Terraform resource.
+
+File:
+
+`main.tf`
+
+Terraform manages:
+
+`terraform-lab.txt`
+
+This simple resource was used to demonstrate the same Terraform workflow that can later be applied to cloud infrastructure.
+
+## Main Commands
+
+`terraform --version`  
+Checks the installed Terraform version.
+
+`terraform init`  
+Initializes the Terraform working directory and downloads required providers.
+
+`terraform plan`  
+Compares the desired configuration with the current state and previews changes.
+
+`terraform apply`  
+Applies the Terraform configuration and creates or modifies resources.
+
+`terraform destroy`  
+Removes resources managed by the Terraform configuration.
+
+`cat terraform.tfstate`  
+Displays the local Terraform State file for learning purposes.
+
+## Terraform Workflow
+
+Configuration:
+
+main.tf
+
+↓
+
+Initialize:
+
+terraform init
+
+↓
+
+Preview:
+
+terraform plan
+
+↓
+
+Deploy:
+
+terraform apply
+
+↓
+
+Terraform State:
+
+terraform.tfstate
+
+↓
+
+Modify configuration
+
+↓
+
+terraform plan
+
+↓
+
+terraform apply
+
+↓
+
+Remove resources:
+
+terraform destroy
+
+## Terraform State
+
+Terraform uses the state file to track resources under its management.
+
+In this lab, the local state file was inspected to understand how Terraform keeps information about managed resources.
+
+State files must be handled carefully in real environments because they may contain sensitive infrastructure information.
+
+## State Reconciliation Test
+
+During the lab, the managed resource was no longer present while the Terraform configuration still declared that it should exist.
+
+Running:
+
+`terraform plan`
+
+returned:
+
+`Plan: 1 to add, 0 to change, 0 to destroy.`
+
+This demonstrated an important Infrastructure as Code concept: Terraform compares the desired configuration with the current infrastructure and determines the actions required to reach the desired state.
+
+## Result
+
+The complete Terraform lifecycle was successfully practiced:
+
+Configuration → Init → Plan → Apply → State → Change → Reconciliation → Destroy
+
+## Key Learning
+
+Terraform allows infrastructure to be defined and managed as code instead of relying on manual configuration.
+
+Although this lab used a local file as the resource, the same workflow can be used with providers such as AWS, Microsoft Azure and other infrastructure platforms.
