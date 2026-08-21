@@ -1,0 +1,74 @@
+==========================================
+LINUX NETWORK REPORT
+==========================================
+Generated: Fri Aug 21 02:29:41 PM -03 2026
+
+HOST INFORMATION
+------------------------------------------
+Hostname: CLAB-UBU01
+IP Address: 192.168.204.128 172.17.0.1 192.168.49.1 172.18.0.1 
+
+NETWORK INTERFACES
+------------------------------------------
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UP             192.168.204.128/24 fe80::20c:29ff:fe93:a2fe/64 
+docker0          DOWN           172.17.0.1/16 
+br-24836b5e9bea  DOWN           192.168.49.1/24 
+br-6c79697c9fa6  DOWN           172.18.0.1/16 
+
+ROUTING TABLE
+------------------------------------------
+default via 192.168.204.2 dev ens33 proto dhcp src 192.168.204.128 metric 100 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+172.18.0.0/16 dev br-6c79697c9fa6 proto kernel scope link src 172.18.0.1 linkdown 
+192.168.49.0/24 dev br-24836b5e9bea proto kernel scope link src 192.168.49.1 linkdown 
+192.168.204.0/24 dev ens33 proto kernel scope link src 192.168.204.128 metric 100 
+
+INTERNET CONNECTIVITY
+------------------------------------------
+Internet Connectivity: OK
+
+DNS RESOLUTION
+------------------------------------------
+DNS Resolution: OK
+
+HTTP/HTTPS CHECK
+------------------------------------------
+HTTP Status: 200
+
+LISTENING PORTS
+------------------------------------------
+Netid State  Recv-Q Send-Q                    Local Address:Port  Peer Address:Port
+udp   UNCONN 0      0                               0.0.0.0:36905      0.0.0.0:*   
+udp   UNCONN 0      0                            127.0.0.54:53         0.0.0.0:*   
+udp   UNCONN 0      0                         127.0.0.53%lo:53         0.0.0.0:*   
+udp   UNCONN 0      0                             127.0.0.1:323        0.0.0.0:*   
+udp   UNCONN 0      0                               0.0.0.0:5353       0.0.0.0:*   
+udp   UNCONN 0      0                               0.0.0.0:43845      0.0.0.0:*   
+udp   UNCONN 0      0                               0.0.0.0:60580      0.0.0.0:*   
+udp   UNCONN 0      0                            172.18.0.1:3702       0.0.0.0:*   
+udp   UNCONN 0      0                       239.255.255.250:3702       0.0.0.0:*   
+udp   UNCONN 0      0                          192.168.49.1:3702       0.0.0.0:*   
+udp   UNCONN 0      0                       239.255.255.250:3702       0.0.0.0:*   
+udp   UNCONN 0      0                            172.17.0.1:3702       0.0.0.0:*   
+udp   UNCONN 0      0                       239.255.255.250:3702       0.0.0.0:*   
+udp   UNCONN 0      0                       192.168.204.128:3702       0.0.0.0:*   
+udp   UNCONN 0      0                       239.255.255.250:3702       0.0.0.0:*   
+udp   UNCONN 0      0                               0.0.0.0:48773      0.0.0.0:*   
+udp   UNCONN 0      0                                     *:45154            *:*   
+udp   UNCONN 0      0                                 [::1]:323           [::]:*   
+udp   UNCONN 0      0                                  [::]:5353          [::]:*   
+udp   UNCONN 0      0      [fe80::20c:29ff:fe93:a2fe]%ens33:3702          [::]:*   
+udp   UNCONN 0      0                       [ff02::c]%ens33:3702          [::]:*   
+tcp   LISTEN 0      4096                      127.0.0.53%lo:53         0.0.0.0:*   
+tcp   LISTEN 0      151                           127.0.0.1:3306       0.0.0.0:*   
+tcp   LISTEN 0      4096                          127.0.0.1:631        0.0.0.0:*   
+tcp   LISTEN 0      4096                            0.0.0.0:22         0.0.0.0:*   
+tcp   LISTEN 0      70                            127.0.0.1:33060      0.0.0.0:*   
+tcp   LISTEN 0      4096                         127.0.0.54:53         0.0.0.0:*   
+tcp   LISTEN 0      4096                               [::]:22            [::]:*   
+tcp   LISTEN 0      4096                              [::1]:631           [::]:*   
+
+==========================================
+NETWORK CHECK COMPLETED
+==========================================
