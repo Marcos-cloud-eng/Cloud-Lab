@@ -1,0 +1,10 @@
+INFO System started
+INFO User logged in
+WARNING Disk usage above 70%
+ERROR Failed to connect to service
+INFO Backup started
+WARNING High memory usage
+ERROR Backup failed
+INFO User logged out
+ERROR Service unavailable
+INFO System check completed

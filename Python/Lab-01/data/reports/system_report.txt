@@ -1,0 +1,17 @@
+
+========================================
+LINUX SYSTEM REPORT
+========================================
+Generated: 2026-08-21 10:05:59
+Hostname: CLAB-UBU01
+User: marcos
+OS: Linux
+Kernel: 7.0.0-29-generic
+Architecture: x86_64
+
+DISK USAGE
+----------------------------------------
+Total: 78.19 GB
+Used:  18.69 GB
+Free:  55.48 GB
+========================================
