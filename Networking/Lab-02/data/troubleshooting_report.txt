@@ -1,0 +1,27 @@
+==========================================
+SERVICE TROUBLESHOOTING REPORT
+==========================================
+Generated: Fri Aug 21 05:40:41 PM -03 2026
+
+TARGET
+------------------------------------------
+Host: 127.0.0.1
+Port: 8000
+URL:  http://127.0.0.1:8000
+
+LISTENING SOCKET CHECK
+------------------------------------------
+Port 8000: LISTENING
+
+TCP CONNECTIVITY CHECK
+------------------------------------------
+TCP Connection: OK
+
+HTTP CHECK
+------------------------------------------
+HTTP Service: OK
+HTTP Status: 200
+
+==========================================
+TROUBLESHOOTING CHECK COMPLETED
+==========================================
